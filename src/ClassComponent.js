@@ -27,11 +27,15 @@ export default class ClassComponent extends React.Component {
     }
   }
 
+  reset = () => {
+    this.setState({properties: 'click a button'});
+  }
+
   render() {
     return (
       <div>
         <h2>Class Component</h2>
-        <button onClick={() => this.setState({properties: 'click a button'})}>Reset</button>
+        <button onClick={this.reset}>Reset</button>
         <br/>
         <br/>
         <button onClick={this.unbound}>Unbound function</button>
